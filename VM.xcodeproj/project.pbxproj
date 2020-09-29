@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		F6200FD72523256C00523A72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6200FD62523256C00523A72 /* AppDelegate.swift */; };
 		F6200FD92523256C00523A72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6200FD82523256C00523A72 /* SceneDelegate.swift */; };
-		F6200FDB2523256C00523A72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6200FDA2523256C00523A72 /* ViewController.swift */; };
+		F6200FDB2523256C00523A72 /* FightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6200FDA2523256C00523A72 /* FightViewController.swift */; };
 		F6200FDE2523256C00523A72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6200FDC2523256C00523A72 /* Main.storyboard */; };
 		F6200FE02523257200523A72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6200FDF2523257200523A72 /* Assets.xcassets */; };
 		F6200FE32523257200523A72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6200FE12523257200523A72 /* LaunchScreen.storyboard */; };
 		F6200FEE2523257200523A72 /* VMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6200FED2523257200523A72 /* VMTests.swift */; };
 		F6200FF92523257200523A72 /* VMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6200FF82523257200523A72 /* VMUITests.swift */; };
+		F6201008252327EA00523A72 /* RestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6201007252327EA00523A72 /* RestViewController.swift */; };
+		F620100A2523280800523A72 /* ZukanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62010092523280800523A72 /* ZukanViewController.swift */; };
+		F620100C2523281E00523A72 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F620100B2523281E00523A72 /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +41,7 @@
 		F6200FD32523256C00523A72 /* VM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6200FD62523256C00523A72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6200FD82523256C00523A72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F6200FDA2523256C00523A72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F6200FDA2523256C00523A72 /* FightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightViewController.swift; sourceTree = "<group>"; };
 		F6200FDD2523256C00523A72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F6200FDF2523257200523A72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6200FE22523257200523A72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +52,10 @@
 		F6200FF42523257200523A72 /* VMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6200FF82523257200523A72 /* VMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMUITests.swift; sourceTree = "<group>"; };
 		F6200FFA2523257200523A72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F62010062523260F00523A72 /* PixelMplus10-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PixelMplus10-Regular.ttf"; sourceTree = "<group>"; };
+		F6201007252327EA00523A72 /* RestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestViewController.swift; sourceTree = "<group>"; };
+		F62010092523280800523A72 /* ZukanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZukanViewController.swift; sourceTree = "<group>"; };
+		F620100B2523281E00523A72 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +108,15 @@
 			children = (
 				F6200FD62523256C00523A72 /* AppDelegate.swift */,
 				F6200FD82523256C00523A72 /* SceneDelegate.swift */,
-				F6200FDA2523256C00523A72 /* ViewController.swift */,
+				F620100B2523281E00523A72 /* SettingViewController.swift */,
+				F6200FDA2523256C00523A72 /* FightViewController.swift */,
+				F6201007252327EA00523A72 /* RestViewController.swift */,
+				F62010092523280800523A72 /* ZukanViewController.swift */,
 				F6200FDC2523256C00523A72 /* Main.storyboard */,
 				F6200FDF2523257200523A72 /* Assets.xcassets */,
 				F6200FE12523257200523A72 /* LaunchScreen.storyboard */,
 				F6200FE42523257200523A72 /* Info.plist */,
+				F62010062523260F00523A72 /* PixelMplus10-Regular.ttf */,
 			);
 			path = VM;
 			sourceTree = "<group>";
@@ -259,9 +270,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6200FDB2523256C00523A72 /* ViewController.swift in Sources */,
+				F6201008252327EA00523A72 /* RestViewController.swift in Sources */,
+				F6200FDB2523256C00523A72 /* FightViewController.swift in Sources */,
 				F6200FD72523256C00523A72 /* AppDelegate.swift in Sources */,
 				F6200FD92523256C00523A72 /* SceneDelegate.swift in Sources */,
+				F620100A2523280800523A72 /* ZukanViewController.swift in Sources */,
+				F620100C2523281E00523A72 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
