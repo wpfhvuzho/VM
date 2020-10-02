@@ -9,12 +9,20 @@
 import UIKit
 
 class SettingViewController: UIViewController {
+    
+    let hoursFightPicker = [1:12]
+    let minutsFightPicker = [1:59]
+    let minutsRestPicker = [1:59]
+    let secondsRestPicker = [1:59]
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
     
 
     /*

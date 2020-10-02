@@ -23,6 +23,11 @@ class RestViewController: UIViewController{
     var div0 = ":0"
     var timer: Timer = Timer()
     var countStOrRe = 0
+    
+    @IBOutlet var gifImageTop: UIImageView!
+    @IBOutlet var gifImageBottom: UIImageView!
+    @IBOutlet var gifImageCharactor: UIImageView!
+    
     @IBOutlet var stopButtonLabel : UILabel!
     @IBOutlet var restartButtonLabel: UILabel!
 
@@ -49,6 +54,15 @@ class RestViewController: UIViewController{
         stopButtonLabel.isHidden = false
         stopButtonLabel.text = "▷とめる"
         restartButtonLabel.text = "▷さいかい"
+        exp += giveExp
+        
+        if exp > 800 {
+            gifImageCharactor.loadGif(name: "god")
+        }else if exp > 300 {
+            gifImageCharactor.loadGif(name: "mob")
+        }else {
+            gifImageCharactor.loadGif(name: "young")
+        }
         
 //        let img01 = UIImageView(image: UIImage.gif(url: "young"))
 //        img01.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
@@ -59,7 +73,7 @@ class RestViewController: UIViewController{
         let fightViewController = storyboard?.instantiateViewController(identifier: "FightViewController")
         self.present(fightViewController!, animated: false, completion: nil)
         timerStartOrStop += 1
-        giveExp += 300
+        giveExp = 300
     }
     
     @objc func updateTimer() {

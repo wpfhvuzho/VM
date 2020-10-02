@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import SwiftGifOrigin
+import SwiftGifOrigin
 
 var timerStartOrStop = 0
 var exp = 0
@@ -24,8 +24,12 @@ class FightViewController: UIViewController{
     var div0 = ":0"
     var timer: Timer = Timer()
 
+    var floatGiveExp = 0.00
     var startCount = 0
     
+    @IBOutlet var gifImageTop: UIImageView!
+    @IBOutlet var gifImageBottom: UIImageView!
+    @IBOutlet var gifImageCharactor: UIImageView!
     
     
     
@@ -51,7 +55,7 @@ class FightViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-
+        
         timerStartButton()
         if timerStartOrStop == 0 {
             startLabel1.isHidden = false
@@ -59,6 +63,15 @@ class FightViewController: UIViewController{
         }else {
             startLabel1.isHidden = true
             startLabel2.isHidden = false
+        }
+        giveExp += Int(floatGiveExp)
+        exp += giveExp
+        if exp > 800 {
+            gifImageCharactor.loadGif(name: "god")
+        }else if exp > 300 {
+            gifImageCharactor.loadGif(name: "mob")
+        }else {
+            gifImageCharactor.loadGif(name: "young")
         }
         
         
@@ -105,9 +118,12 @@ class FightViewController: UIViewController{
         }else{
             timerCountLabel.text = String(counterHours) + div + String(counterMinuts) + div + String(counterSeconds)
         }
-        if counterHours > 1 {
-            giveExp -= 1
+        if counterHours > 10 {
+            exp -= 1
+        }else {
+            floatGiveExp += 0.01
         }
+        
     }
 
     @objc func timerStartButton() {
@@ -121,11 +137,11 @@ class FightViewController: UIViewController{
 
    //       timerLabel.text = String(counterHours) + div + tring(counterMinuts) + div +String(counterSeconds)
     //       timerLabel.text = String(counterSeconds)
-    @IBAction func timerStopButton(_ sendr: Any) {
+    @IBAction func timerStopButton() {
         timer.invalidate()
     }
     //リセットボタン
-    @IBAction func timerResetButton(_ sender: Any) {
+    @IBAction func timerResetButton() {
         timer.invalidate()
         counterSeconds = 0
         counterMinuts = 0
