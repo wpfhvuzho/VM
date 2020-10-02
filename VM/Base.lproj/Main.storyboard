@@ -31,7 +31,7 @@
         <!--Fight View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="FightViewController" id="BYZ-38-t0r" customClass="FightViewController" customModule="VM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FightViewController" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="FightViewController" customModule="VM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,12 +79,6 @@
                                     <segue destination="7hZ-HC-NZn" kind="show" id="fXv-Mg-e0Q"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="アプリを開いてから" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdn-Fp-9lB">
-                                <rect key="frame" x="20" y="59" width="374" height="19"/>
-                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLU-oy-RLw">
                                 <rect key="frame" x="20" y="86" width="374" height="96"/>
                                 <constraints>
@@ -96,6 +90,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="休憩時間開始から" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FW0-ND-K8p">
+                                <rect key="frame" x="20" y="44" width="374" height="19"/>
+                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="アプリを開いてから" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdn-Fp-9lB">
                                 <rect key="frame" x="20" y="44" width="374" height="19"/>
                                 <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -142,7 +142,7 @@
         <!--Rest View Controller-->
         <scene sceneID="Lug-hm-57Z">
             <objects>
-                <viewController storyboardIdentifier="RestViewController" id="e4O-Vv-30R" customClass="RestViewController" customModule="VM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RestViewController" modalPresentationStyle="fullScreen" id="e4O-Vv-30R" customClass="RestViewController" customModule="VM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ypg-sf-sWE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

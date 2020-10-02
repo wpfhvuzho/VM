@@ -54,6 +54,7 @@ class RestViewController: UIViewController{
         let fightViewController = storyboard?.instantiateViewController(identifier: "FightViewController")
         self.present(fightViewController!, animated: false, completion: nil)
         timerStartOrStop += 1
+        giveExp += 300
     }
     
     @objc func updateTimer() {

@@ -10,6 +10,8 @@ import UIKit
 //import SwiftGifOrigin
 
 var timerStartOrStop = 0
+var exp = 0
+var giveExp = 0
 
 class FightViewController: UIViewController{
 
@@ -26,6 +28,7 @@ class FightViewController: UIViewController{
     
     
     
+    
 
     
     @IBOutlet var startLabel1: UILabel!
@@ -39,6 +42,7 @@ class FightViewController: UIViewController{
     @IBOutlet var secondsRestPicker: UIPickerView!
     
     
+    
 //    var count: Float = 0.0
     
    
@@ -49,7 +53,7 @@ class FightViewController: UIViewController{
         // Do any additional setup after loading the view.
 
         timerStartButton()
-        if startCount == 0 {
+        if timerStartOrStop == 0 {
             startLabel1.isHidden = false
             startLabel2.isHidden = true
         }else {
@@ -73,7 +77,7 @@ class FightViewController: UIViewController{
     @IBAction func toRest() {
         let restViewController = storyboard?.instantiateViewController(identifier: "RestViewController")
         self.present(restViewController!, animated: false, completion: nil)
-        startCount += 1
+        timerStartOrStop += 1
     }
     
     @IBAction func toZukan() {
@@ -100,6 +104,9 @@ class FightViewController: UIViewController{
 
         }else{
             timerCountLabel.text = String(counterHours) + div + String(counterMinuts) + div + String(counterSeconds)
+        }
+        if counterHours > 1 {
+            giveExp -= 1
         }
     }
 
