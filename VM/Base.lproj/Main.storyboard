@@ -170,24 +170,11 @@
                                             <constraint firstAttribute="height" constant="74" id="NUn-bB-nFK"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="56"/>
-                                        <state key="normal" title="▷とめる">
+                                        <state key="normal">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="timerStopButton:" destination="e4O-Vv-30R" eventType="touchUpInside" id="efD-iX-Q6R"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8da-eo-tWf">
-                                        <rect key="frame" x="8" y="780" width="374" height="74"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="74" id="1D6-Ih-5RN"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="56"/>
-                                        <state key="normal" title="▷さいかい">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="restartTimerButton" destination="e4O-Vv-30R" eventType="touchUpInside" id="Trh-da-yWW"/>
+                                            <action selector="timerStopOrRestartButton:" destination="e4O-Vv-30R" eventType="touchUpInside" id="e79-Ep-5Vx"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X4X-fR-oBX">
@@ -207,7 +194,7 @@
                                             <segue destination="7hZ-HC-NZn" kind="show" id="2sn-IH-PCC"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOc-J4-92f">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOc-J4-92f">
                                         <rect key="frame" x="20" y="87" width="374" height="96"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="374" id="lAg-9y-Kw3"/>
@@ -217,22 +204,51 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="▷とめる" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQA-GF-z7k">
+                                        <rect key="frame" x="20" y="716" width="374" height="74"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="374" id="94N-uk-JZg"/>
+                                            <constraint firstAttribute="height" constant="74" id="IhB-Tb-Jmt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="56"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="▷さいかい" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyj-Zf-LJF" userLabel="▷さいかい">
+                                        <rect key="frame" x="20" y="716" width="374" height="74"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="374" id="TYM-KY-pDu"/>
+                                            <constraint firstAttribute="height" constant="74" id="WQI-xW-PQ0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="56"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="lVa-v5-rO0" firstAttribute="trailing" secondItem="C5n-lJ-l1R" secondAttribute="trailing" constant="20" id="2tP-Kw-YPv"/>
                                     <constraint firstItem="Ewe-2c-UtN" firstAttribute="top" secondItem="jM3-Ez-Q8i" secondAttribute="bottom" constant="39" id="3Ob-Bk-ORs"/>
                                     <constraint firstItem="lVa-v5-rO0" firstAttribute="trailing" secondItem="C5n-lJ-l1R" secondAttribute="trailing" constant="20" id="3aq-8v-l0j"/>
+                                    <constraint firstItem="Ewe-2c-UtN" firstAttribute="top" secondItem="pyj-Zf-LJF" secondAttribute="bottom" constant="39" id="8Bd-ES-wry"/>
                                     <constraint firstItem="lVa-v5-rO0" firstAttribute="trailing" secondItem="X4X-fR-oBX" secondAttribute="trailing" constant="20" id="E3r-wh-qqu"/>
+                                    <constraint firstItem="lVa-v5-rO0" firstAttribute="trailing" secondItem="NQA-GF-z7k" secondAttribute="trailing" constant="20" id="L7b-sf-0qE"/>
                                     <constraint firstItem="lVa-v5-rO0" firstAttribute="trailing" secondItem="Ewe-2c-UtN" secondAttribute="trailing" constant="20" id="RAV-fZ-5yP"/>
+                                    <constraint firstItem="lVa-v5-rO0" firstAttribute="trailing" secondItem="zOc-J4-92f" secondAttribute="trailing" constant="20" id="UKs-6p-vfK"/>
+                                    <constraint firstItem="zOc-J4-92f" firstAttribute="top" secondItem="lVa-v5-rO0" secondAttribute="top" constant="43" id="UkJ-MP-YZq"/>
                                     <constraint firstItem="zOc-J4-92f" firstAttribute="leading" secondItem="lVa-v5-rO0" secondAttribute="leading" constant="20" id="X4f-dg-9PM"/>
                                     <constraint firstItem="C5n-lJ-l1R" firstAttribute="leading" secondItem="lVa-v5-rO0" secondAttribute="leading" constant="20" id="XGG-pv-yU5"/>
                                     <constraint firstItem="jM3-Ez-Q8i" firstAttribute="leading" secondItem="lVa-v5-rO0" secondAttribute="leading" constant="20" id="cM9-5r-G5u"/>
+                                    <constraint firstItem="lVa-v5-rO0" firstAttribute="trailing" secondItem="pyj-Zf-LJF" secondAttribute="trailing" constant="20" id="dTY-qD-bbj"/>
                                     <constraint firstItem="Ewe-2c-UtN" firstAttribute="bottom" secondItem="lVa-v5-rO0" secondAttribute="bottom" id="e5H-No-Jl8"/>
+                                    <constraint firstItem="Ewe-2c-UtN" firstAttribute="top" secondItem="NQA-GF-z7k" secondAttribute="bottom" constant="39" id="fOK-Zn-BM5"/>
+                                    <constraint firstItem="pyj-Zf-LJF" firstAttribute="leading" secondItem="lVa-v5-rO0" secondAttribute="leading" constant="20" id="klK-tT-XLO"/>
                                     <constraint firstItem="jM3-Ez-Q8i" firstAttribute="top" secondItem="C5n-lJ-l1R" secondAttribute="bottom" constant="30" id="lBZ-CM-RrE"/>
                                     <constraint firstItem="lVa-v5-rO0" firstAttribute="trailing" secondItem="zOc-J4-92f" secondAttribute="trailing" constant="20" id="oPL-34-f1P"/>
+                                    <constraint firstItem="NQA-GF-z7k" firstAttribute="leading" secondItem="lVa-v5-rO0" secondAttribute="leading" constant="20" id="p1N-Hy-qsa"/>
                                     <constraint firstItem="C5n-lJ-l1R" firstAttribute="leading" secondItem="lVa-v5-rO0" secondAttribute="leading" constant="20" id="sR0-vj-chj"/>
                                     <constraint firstItem="lVa-v5-rO0" firstAttribute="trailing" secondItem="jM3-Ez-Q8i" secondAttribute="trailing" constant="20" id="udq-th-DXH"/>
+                                    <constraint firstItem="zOc-J4-92f" firstAttribute="leading" secondItem="lVa-v5-rO0" secondAttribute="leading" constant="20" id="vD6-ka-Uo2"/>
                                     <constraint firstItem="X4X-fR-oBX" firstAttribute="leading" secondItem="lVa-v5-rO0" secondAttribute="leading" constant="20" id="yi1-FL-v3R"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="lVa-v5-rO0"/>
@@ -242,12 +258,14 @@
                         <viewLayoutGuide key="safeArea" id="wQ6-4A-ojj"/>
                     </view>
                     <connections>
+                        <outlet property="restartButtonLabel" destination="pyj-Zf-LJF" id="Lrr-ha-pad"/>
+                        <outlet property="stopButtonLabel" destination="NQA-GF-z7k" id="eaH-H6-I5g"/>
                         <outlet property="timerCountLabel2" destination="zOc-J4-92f" id="h7O-r8-r2S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E5m-ve-xvY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="971" y="104"/>
+            <point key="canvasLocation" x="969.56521739130437" y="103.79464285714285"/>
         </scene>
         <!--Zukan View Controller-->
         <scene sceneID="eNv-50-fTX">

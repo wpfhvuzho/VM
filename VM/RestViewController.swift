@@ -22,7 +22,8 @@ class RestViewController: UIViewController{
     var div = ":"
     var div0 = ":0"
     var timer: Timer = Timer()
-    @IBOutlet var stopButtonLabel: UILabel!
+    var countStOrRe = 0
+    @IBOutlet var stopButtonLabel : UILabel!
     @IBOutlet var restartButtonLabel: UILabel!
 
     override func viewDidLoad() {
@@ -44,6 +45,10 @@ class RestViewController: UIViewController{
         }else{
             timerCountLabel2.text = String(counterHours) + div + String(counterMinuts) + div + String(counterSeconds)
         }
+        restartButtonLabel.isHidden = true
+        stopButtonLabel.isHidden = false
+        stopButtonLabel.text = "▷とめる"
+        restartButtonLabel.text = "▷さいかい"
         
 //        let img01 = UIImageView(image: UIImage.gif(url: "young"))
 //        img01.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
@@ -91,18 +96,27 @@ class RestViewController: UIViewController{
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:  #selector(self.updateTimer), userInfo: nil, repeats: true)
     }
     
-    @IBAction func restartTimerButton() {
+    func restartTimerButton() {
         timerStartButton()
+        restartButtonLabel.isHidden = true
         stopButtonLabel.isHidden = false
+        
         
     }
     
     //       timerLabel.text = String(counterHours) + div + String(counterMinuts) + div +String(counterSeconds)
     //       timerLabel.text = String(counterSeconds)
-    @IBAction func timerStopButton(_ sendr: Any) {
-        timer.invalidate()
-        restartButtonLabel.isHidden = false
-        stopButtonLabel.isHidden = true
+    @IBAction func timerStopOrRestartButton(_ sendr: Any) {
+        if countStOrRe == 0 {
+            timer.invalidate()
+            restartButtonLabel.isHidden = false
+            stopButtonLabel.isHidden = true
+            countStOrRe += 1
+        }else {
+            restartTimerButton()
+            countStOrRe -= 1
+        }
+        
         
     }
     //リセットボタン
