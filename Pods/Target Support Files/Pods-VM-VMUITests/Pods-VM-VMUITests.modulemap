@@ -1,0 +1,6 @@
+framework module Pods_VM_VMUITests {
+  umbrella header "Pods-VM-VMUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -188,6 +188,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLB-nb-NdG">
+                                <rect key="frame" x="20" y="821" width="80.5" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -199,6 +205,7 @@
                             <constraint firstItem="z3N-o7-LL5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8w8-4A-lAd"/>
                             <constraint firstItem="9MM-hO-N3f" firstAttribute="top" secondItem="z3N-o7-LL5" secondAttribute="bottom" constant="8" id="C3U-3S-XeH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ytM-wE-gnV" secondAttribute="trailing" constant="20" id="DNi-RE-cv1"/>
+                            <constraint firstItem="OLB-nb-NdG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="E09-Yn-hRw"/>
                             <constraint firstItem="GFg-Vc-KD7" firstAttribute="top" secondItem="9MM-hO-N3f" secondAttribute="bottom" constant="30" id="EQj-W1-C2l"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9MM-hO-N3f" secondAttribute="trailing" constant="20" id="IEn-HC-xgA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9MM-hO-N3f" secondAttribute="trailing" constant="20" id="JOy-BD-CDa"/>
@@ -208,6 +215,7 @@
                             <constraint firstItem="zmb-a9-vIU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OE5-ir-nZS"/>
                             <constraint firstItem="9MM-hO-N3f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Q2O-fM-IWs"/>
                             <constraint firstItem="FW0-ND-K8p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QB0-WY-fho"/>
+                            <constraint firstItem="OLB-nb-NdG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="SBa-Kc-Sjo"/>
                             <constraint firstItem="ytM-wE-gnV" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="TQp-1l-HhV"/>
                             <constraint firstItem="XLU-oy-RLw" firstAttribute="top" secondItem="FW0-ND-K8p" secondAttribute="bottom" constant="23" id="Tnr-wm-dmt"/>
                             <constraint firstItem="ytM-wE-gnV" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="V2i-H3-fk1"/>
@@ -228,6 +236,7 @@
                         <outlet property="gifImageBottom" destination="JsA-aZ-DH9" id="3AT-0c-dut"/>
                         <outlet property="gifImageCharactor" destination="z3N-o7-LL5" id="VcT-ES-Am2"/>
                         <outlet property="gifImageTop" destination="zmb-a9-vIU" id="eVD-4j-lv9"/>
+                        <outlet property="needExpLabel" destination="OLB-nb-NdG" id="9me-yv-PVn"/>
                         <outlet property="startLabel1" destination="cdn-Fp-9lB" id="Oe8-Ro-1Tg"/>
                         <outlet property="startLabel2" destination="FW0-ND-K8p" id="knN-50-OhE"/>
                         <outlet property="timerCountLabel" destination="XLU-oy-RLw" id="MzF-2E-Gv4"/>
@@ -333,6 +342,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmD-xn-H3a">
+                                        <rect key="frame" x="20" y="806" width="94" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -343,6 +358,7 @@
                                     <constraint firstItem="Ewe-2c-UtN" firstAttribute="top" secondItem="pyj-Zf-LJF" secondAttribute="bottom" constant="39" id="8Bd-ES-wry"/>
                                     <constraint firstItem="ZTD-f6-plz" firstAttribute="top" secondItem="zOc-J4-92f" secondAttribute="bottom" constant="7" id="8zy-77-u5Z"/>
                                     <constraint firstItem="X4X-fR-oBX" firstAttribute="top" secondItem="ju2-Ne-tH8" secondAttribute="top" id="GOL-Re-toQ"/>
+                                    <constraint firstItem="gmD-xn-H3a" firstAttribute="leading" secondItem="lVa-v5-rO0" secondAttribute="leading" constant="20" id="KYQ-rK-zCM"/>
                                     <constraint firstItem="lVa-v5-rO0" firstAttribute="trailing" secondItem="NQA-GF-z7k" secondAttribute="trailing" constant="20" id="L7b-sf-0qE"/>
                                     <constraint firstItem="lVa-v5-rO0" firstAttribute="trailing" secondItem="Ewe-2c-UtN" secondAttribute="trailing" constant="20" id="RAV-fZ-5yP"/>
                                     <constraint firstItem="X4X-fR-oBX" firstAttribute="leading" secondItem="lVa-v5-rO0" secondAttribute="leading" id="RDE-EP-4lE"/>
@@ -364,6 +380,7 @@
                                     <constraint firstItem="C5n-lJ-l1R" firstAttribute="leading" secondItem="lVa-v5-rO0" secondAttribute="leading" constant="20" id="sR0-vj-chj"/>
                                     <constraint firstItem="lVa-v5-rO0" firstAttribute="trailing" secondItem="jM3-Ez-Q8i" secondAttribute="trailing" constant="20" id="udq-th-DXH"/>
                                     <constraint firstItem="zOc-J4-92f" firstAttribute="leading" secondItem="lVa-v5-rO0" secondAttribute="leading" constant="20" id="vD6-ka-Uo2"/>
+                                    <constraint firstItem="lVa-v5-rO0" firstAttribute="bottom" secondItem="gmD-xn-H3a" secondAttribute="bottom" constant="8" id="waQ-o4-h3A"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="lVa-v5-rO0"/>
                             </view>
@@ -375,6 +392,7 @@
                         <outlet property="gifImageBottom" destination="I9X-5k-Ppk" id="yAo-i5-guF"/>
                         <outlet property="gifImageCharactor" destination="ZTD-f6-plz" id="J6g-nF-fHX"/>
                         <outlet property="gifImageTop" destination="X4X-fR-oBX" id="etg-1H-o2F"/>
+                        <outlet property="needExpLabel" destination="gmD-xn-H3a" id="raK-nf-XJ7"/>
                         <outlet property="restartButtonLabel" destination="pyj-Zf-LJF" id="Lrr-ha-pad"/>
                         <outlet property="stopButtonLabel" destination="NQA-GF-z7k" id="eaH-H6-I5g"/>
                         <outlet property="timerCountLabel2" destination="zOc-J4-92f" id="h7O-r8-r2S"/>
@@ -546,6 +564,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2sn-IH-PCC"/>
+        <segue reference="fXv-Mg-e0Q"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -30,6 +30,8 @@ class RestViewController: UIViewController{
     
     @IBOutlet var stopButtonLabel : UILabel!
     @IBOutlet var restartButtonLabel: UILabel!
+    
+    @IBOutlet var needExpLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,13 +75,14 @@ class RestViewController: UIViewController{
 //        img01.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
 //        self.view.addSubview(img01)
         giveExp = 0
+        needExpLabel.text = String(exp)
     }
     
     @IBAction func toFight() {
         let fightViewController = storyboard?.instantiateViewController(identifier: "FightViewController")
         self.present(fightViewController!, animated: false, completion: nil)
         timerStartOrStop += 1
-        giveExp = 300
+        giveExp += 300
     }
     func notificationExp() {
         

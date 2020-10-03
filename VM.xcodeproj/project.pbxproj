@@ -26,6 +26,7 @@
 		F6879ECF2526E000004EDAC1 /* mob.gif in Resources */ = {isa = PBXBuildFile; fileRef = F6879ECC2526E000004EDAC1 /* mob.gif */; };
 		F6879ED72528199C004EDAC1 /* hero.gif in Resources */ = {isa = PBXBuildFile; fileRef = F6879ED62528199C004EDAC1 /* hero.gif */; };
 		F6879ED9252819A6004EDAC1 /* sky.gif in Resources */ = {isa = PBXBuildFile; fileRef = F6879ED8252819A6004EDAC1 /* sky.gif */; };
+		F6879EDB25282E23004EDAC1 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6879EDA25282E23004EDAC1 /* SpriteKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		F6879ECC2526E000004EDAC1 /* mob.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = mob.gif; sourceTree = SOURCE_ROOT; };
 		F6879ED62528199C004EDAC1 /* hero.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hero.gif; sourceTree = SOURCE_ROOT; };
 		F6879ED8252819A6004EDAC1 /* sky.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sky.gif; sourceTree = SOURCE_ROOT; };
+		F6879EDA25282E23004EDAC1 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		FFC8B67C63B75C2013D44CC4 /* Pods-VM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VM.debug.xcconfig"; path = "Target Support Files/Pods-VM/Pods-VM.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6879EDB25282E23004EDAC1 /* SpriteKit.framework in Frameworks */,
 				2D02E9FEF1C2CBE446100926 /* Pods_VM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,6 +127,7 @@
 		AC1983D206EF94483DBF4C8D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F6879EDA25282E23004EDAC1 /* SpriteKit.framework */,
 				20D953161A8C81BB0FF2076F /* Pods_VM.framework */,
 				1FF9E6025FA740246A937525 /* Pods_VM_VMUITests.framework */,
 				EF9DADF6334D869A2A16D3A6 /* Pods_VMTests.framework */,

@@ -32,7 +32,7 @@ class FightViewController: UIViewController{
     @IBOutlet var gifImageBottom: UIImageView!
     @IBOutlet var gifImageCharactor: UIImageView!
     
-    
+    @IBOutlet var needExpLabel: UILabel!
     
 
     
@@ -40,11 +40,12 @@ class FightViewController: UIViewController{
     @IBOutlet var startLabel2: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
-    @IBOutlet var hoursFourcusPicker: UIPickerView!
-    @IBOutlet var minutsFourcusPicker: UIPickerView!
+//    @IBOutlet var hoursFourcusPicker: UIPickerView!
+//    @IBOutlet var minutsFourcusPicker: UIPickerView!
+//    
+//    @IBOutlet var minutsRestPicker: UIPickerView!
+//    @IBOutlet var secondsRestPicker: UIPickerView!
     
-    @IBOutlet var minutsRestPicker: UIPickerView!
-    @IBOutlet var secondsRestPicker: UIPickerView!
     
     
     
@@ -90,6 +91,7 @@ class FightViewController: UIViewController{
         
         giveExp = 0
         
+        needExpLabel.text = String(exp)
         
 //        let img01 = UIImageView(image: UIImage.gif(url: "young"))
 //        img01.frame = CGRect(x: 0, y: 0, width: 100, height: 100)

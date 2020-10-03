@@ -24,6 +24,7 @@ class ZukanViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         if runk >= 0{
             gifImageYoung.loadGif(name: "young")
             needExp = 300 - exp
