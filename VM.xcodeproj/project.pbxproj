@@ -24,6 +24,8 @@
 		F6879ECD2526E000004EDAC1 /* god.gif in Resources */ = {isa = PBXBuildFile; fileRef = F6879ECA2526E000004EDAC1 /* god.gif */; };
 		F6879ECE2526E000004EDAC1 /* young.gif in Resources */ = {isa = PBXBuildFile; fileRef = F6879ECB2526E000004EDAC1 /* young.gif */; };
 		F6879ECF2526E000004EDAC1 /* mob.gif in Resources */ = {isa = PBXBuildFile; fileRef = F6879ECC2526E000004EDAC1 /* mob.gif */; };
+		F6879ED72528199C004EDAC1 /* hero.gif in Resources */ = {isa = PBXBuildFile; fileRef = F6879ED62528199C004EDAC1 /* hero.gif */; };
+		F6879ED9252819A6004EDAC1 /* sky.gif in Resources */ = {isa = PBXBuildFile; fileRef = F6879ED8252819A6004EDAC1 /* sky.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		F6879ECA2526E000004EDAC1 /* god.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = god.gif; sourceTree = SOURCE_ROOT; };
 		F6879ECB2526E000004EDAC1 /* young.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = young.gif; sourceTree = SOURCE_ROOT; };
 		F6879ECC2526E000004EDAC1 /* mob.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = mob.gif; sourceTree = SOURCE_ROOT; };
+		F6879ED62528199C004EDAC1 /* hero.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hero.gif; sourceTree = SOURCE_ROOT; };
+		F6879ED8252819A6004EDAC1 /* sky.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sky.gif; sourceTree = SOURCE_ROOT; };
 		FFC8B67C63B75C2013D44CC4 /* Pods-VM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VM.debug.xcconfig"; path = "Target Support Files/Pods-VM/Pods-VM.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,8 +164,10 @@
 				F62010092523280800523A72 /* ZukanViewController.swift */,
 				F6200FDC2523256C00523A72 /* Main.storyboard */,
 				F6879ECA2526E000004EDAC1 /* god.gif */,
+				F6879ED62528199C004EDAC1 /* hero.gif */,
 				F6879ECC2526E000004EDAC1 /* mob.gif */,
 				F6879ECB2526E000004EDAC1 /* young.gif */,
+				F6879ED8252819A6004EDAC1 /* sky.gif */,
 				F6200FDF2523257200523A72 /* Assets.xcassets */,
 				F6200FE12523257200523A72 /* LaunchScreen.storyboard */,
 				F6200FE42523257200523A72 /* Info.plist */,
@@ -298,6 +304,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6200FE32523257200523A72 /* LaunchScreen.storyboard in Resources */,
+				F6879ED72528199C004EDAC1 /* hero.gif in Resources */,
+				F6879ED9252819A6004EDAC1 /* sky.gif in Resources */,
 				F6879ECD2526E000004EDAC1 /* god.gif in Resources */,
 				F6200FE02523257200523A72 /* Assets.xcassets in Resources */,
 				F6879ECF2526E000004EDAC1 /* mob.gif in Resources */,

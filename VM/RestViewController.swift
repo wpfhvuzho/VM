@@ -55,18 +55,24 @@ class RestViewController: UIViewController{
         stopButtonLabel.text = "▷とめる"
         restartButtonLabel.text = "▷さいかい"
         exp += giveExp
+        notificationExp()
         
-        if exp > 800 {
+        if runk == 3 {
             gifImageCharactor.loadGif(name: "god")
-        }else if exp > 300 {
+        }else if runk == 2 {
+            gifImageCharactor.loadGif(name: "hero")
+        }else if runk == 1 {
             gifImageCharactor.loadGif(name: "mob")
         }else {
             gifImageCharactor.loadGif(name: "young")
         }
+        gifImageTop.loadGif(name: "sky")
+        gifImageBottom.loadGif(name: "dot")
         
 //        let img01 = UIImageView(image: UIImage.gif(url: "young"))
 //        img01.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
 //        self.view.addSubview(img01)
+        giveExp = 0
     }
     
     @IBAction func toFight() {
@@ -74,6 +80,21 @@ class RestViewController: UIViewController{
         self.present(fightViewController!, animated: false, completion: nil)
         timerStartOrStop += 1
         giveExp = 300
+    }
+    func notificationExp() {
+        
+        let alert: UIAlertController = UIAlertController(title: "おめでとう！", message: String(giveExp) + "の経験値を獲得！", preferredStyle: .alert)
+        
+        alert.addAction(
+                UIAlertAction(
+                    title: "次も頑張る",
+                    style: .default,
+                    handler: { action in
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                )
+            )
+        present(alert, animated: true, completion: nil)
     }
     
     @objc func updateTimer() {

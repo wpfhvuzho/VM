@@ -12,6 +12,7 @@ import SwiftGifOrigin
 var timerStartOrStop = 0
 var exp = 0
 var giveExp = 0
+var runk = 0
 
 class FightViewController: UIViewController{
 
@@ -66,15 +67,28 @@ class FightViewController: UIViewController{
         }
         giveExp += Int(floatGiveExp)
         exp += giveExp
-        if exp > 800 {
+        if exp < 300 {
+            runk = 0
+        }else if exp < 800{
+            runk = 1
+        }else if exp < 1500 {
+            runk = 2
+        }else {
+            runk = 3
+        }
+        if runk == 3 {
             gifImageCharactor.loadGif(name: "god")
-        }else if exp > 300 {
+        }else if runk == 2 {
+            gifImageCharactor.loadGif(name: "hero")
+        }else if runk == 1 {
             gifImageCharactor.loadGif(name: "mob")
         }else {
             gifImageCharactor.loadGif(name: "young")
         }
+        gifImageTop.loadGif(name: "sky")
+        gifImageBottom.loadGif(name: "dot")
         
-        
+        giveExp = 0
         
         
 //        let img01 = UIImageView(image: UIImage.gif(url: "young"))
@@ -84,7 +98,21 @@ class FightViewController: UIViewController{
     
 
 
-    
+    func notificationRunkUp() {
+        
+        let alert: UIAlertController = UIAlertController(title: "おめでとう！", message: "ランクが上がりました！", preferredStyle: .alert)
+        
+        alert.addAction(
+                UIAlertAction(
+                    title: "次も頑張る",
+                    style: .default,
+                    handler: { action in
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                )
+            )
+        present(alert, animated: true, completion: nil)
+    }
 
     
     @IBAction func toRest() {
@@ -119,7 +147,7 @@ class FightViewController: UIViewController{
             timerCountLabel.text = String(counterHours) + div + String(counterMinuts) + div + String(counterSeconds)
         }
         if counterHours > 10 {
-            exp -= 1
+            floatGiveExp -= 0.1
         }else {
             floatGiveExp += 0.01
         }
