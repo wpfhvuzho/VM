@@ -224,7 +224,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="gifImageBottom" destination="JsA-aZ-DH9" id="3AT-0c-dut"/>
                         <outlet property="gifImageCharactor" destination="z3N-o7-LL5" id="VcT-ES-Am2"/>
+                        <outlet property="gifImageTop" destination="zmb-a9-vIU" id="eVD-4j-lv9"/>
                         <outlet property="startLabel1" destination="cdn-Fp-9lB" id="Oe8-Ro-1Tg"/>
                         <outlet property="startLabel2" destination="FW0-ND-K8p" id="knN-50-OhE"/>
                         <outlet property="timerCountLabel" destination="XLU-oy-RLw" id="MzF-2E-Gv4"/>
@@ -508,6 +510,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2sn-IH-PCC"/>
+        <segue reference="fXv-Mg-e0Q"/>
     </inferredMetricsTieBreakers>
 </document>

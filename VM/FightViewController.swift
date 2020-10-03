@@ -100,7 +100,7 @@ class FightViewController: UIViewController{
     @objc func updateTimer() {
         counterSeconds += 1
         if counterSeconds > 99 {
-            counterMinuts += 30
+            counterMinuts += 1
             counterSeconds = 0
         }
         if counterMinuts > 59 {

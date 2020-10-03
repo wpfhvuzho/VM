@@ -17,8 +17,8 @@ class RestViewController: UIViewController{
 
     @IBOutlet weak var timerCountLabel2: UILabel!
     var counterSeconds = 00
-    var counterMinuts = 31
-    var counterHours = 01
+    var counterMinuts = 30
+    var counterHours = 00
     var div = ":"
     var div0 = ":0"
     var timer: Timer = Timer()
@@ -77,9 +77,9 @@ class RestViewController: UIViewController{
     }
     
     @objc func updateTimer() {
-        counterSeconds -= 10
+        counterSeconds -= 1
         if counterSeconds < 0 {
-            counterMinuts -= 30
+            counterMinuts -= 1
             counterSeconds = 59
         }
         if counterMinuts < 0 {
