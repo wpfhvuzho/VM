@@ -45,24 +45,24 @@ class ZukanViewController: UIViewController {
             needExp = 300 - exp
             youngLabel.isHidden = false
         }
-        if runk >= 0 {
+        if runk >= 1 {
             gifImageMob.loadGif(name: "mob")
             needExp = 800 - exp
             mobLabel.isHidden = false
             
         }
-        if runk >= 0 {
+        if runk >= 2 {
             gifImageGenius.loadGif(name: "genius")
             needExp = 1500 - exp
             
             geniusLabel.isHidden = false
         }
-        if runk >= 0 {
+        if runk >= 3 {
             gifImageHero.loadGif(name: "hero")
             needExp = 3000 - exp
             heroLabel.isHidden = false
         }
-        if runk >= 0 {
+        if runk >= 4 {
             gifImageGod.loadGif(name: "god")
             needExp =  exp
             godLabel.isHidden = false
@@ -71,7 +71,7 @@ class ZukanViewController: UIViewController {
         
         
         
-        needExpLabel.text = String(21)
+        needExpLabel.text = String(exp)
         // Do any additional setup after loading the view.
         if timerStartOrStop == 0 {
             beforeExpLabel.text = "0"
