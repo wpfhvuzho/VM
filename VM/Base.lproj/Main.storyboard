@@ -591,8 +591,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="勇者" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7k-dW-H2O">
-                                <rect key="frame" x="207" y="658" width="207" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="勇者" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7k-dW-H2O">
+                                <rect key="frame" x="207" y="658.5" width="207" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="207" id="x61-Bo-NMc"/>
                                 </constraints>
@@ -633,6 +633,7 @@
                             <constraint firstItem="yxl-g7-MnO" firstAttribute="top" secondItem="jDl-Pe-TjF" secondAttribute="top" id="0KA-lz-FpT"/>
                             <constraint firstItem="jDl-Pe-TjF" firstAttribute="trailing" secondItem="GxG-H6-iga" secondAttribute="trailing" constant="20" id="0q0-vS-1fH"/>
                             <constraint firstAttribute="bottom" secondItem="LTd-g9-auo" secondAttribute="bottom" id="19d-Xn-vjr"/>
+                            <constraint firstItem="jDl-Pe-TjF" firstAttribute="bottom" secondItem="j7k-dW-H2O" secondAttribute="bottom" constant="183" id="35R-eX-4wk"/>
                             <constraint firstItem="DJf-fi-v4U" firstAttribute="trailing" secondItem="jDl-Pe-TjF" secondAttribute="trailing" id="46L-kz-OQl"/>
                             <constraint firstItem="rAn-5C-zl7" firstAttribute="top" secondItem="yxl-g7-MnO" secondAttribute="bottom" constant="28" id="4IW-vN-EEe"/>
                             <constraint firstItem="GxG-H6-iga" firstAttribute="leading" secondItem="jDl-Pe-TjF" secondAttribute="leading" constant="20" id="7pm-AN-Tbv"/>
