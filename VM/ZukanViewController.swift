@@ -72,7 +72,12 @@ class ZukanViewController: UIViewController {
         
         needExpLabel.text = String(needExp)
         // Do any additional setup after loading the view.
-        beforeExpLabel.text = String(beforeExp)
+        if timerStartOrStop == 0 {
+            beforeExpLabel.text = "0"
+        }else {
+            beforeExpLabel.text = String(beforeExp)
+        }
+        
     }
     @IBAction func toFight() {
         let fightViewController = storyboard?.instantiateViewController(identifier: "FightViewController")

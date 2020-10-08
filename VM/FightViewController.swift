@@ -136,6 +136,7 @@ class FightViewController: UIViewController, UNUserNotificationCenterDelegate{
         counterMinuts = 0
         counterHours = 0
         
+        nowGiveExpLabel.text = String(round(floatGiveExp * 10)/10)
 //        獲得済みの経験値を表示
 //        needExpLabel.text = String(exp)
         
@@ -287,7 +288,7 @@ class FightViewController: UIViewController, UNUserNotificationCenterDelegate{
 //    タイマーを再生する機能
     @objc func timerStartButton() {
         timer.invalidate()
-        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector:  #selector(self.updateTimer), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:  #selector(self.updateTimer), userInfo: nil, repeats: true)
     }
 
 //    再開の機能

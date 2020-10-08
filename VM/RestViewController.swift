@@ -75,7 +75,7 @@ class RestViewController: UIViewController{
         //        ランクアップするのかどうかを判定する
         judge = 0
         judge = exp + giveExp
-        if judge >= 300 && exp < 300 {
+        if judge >= 30 && exp < 30 {
             startCount = 1
         }else if judge >= 800 && exp < 800 {
             startCount = 2
@@ -120,6 +120,8 @@ class RestViewController: UIViewController{
         counter = 0
         floatGiveExp = 0
         
+
+        timerCountLabel2.text =  String(counterMinuts) + div + div0 + String(counterSeconds)
 
         
 //        let img01 = UIImageView(image: UIImage.gif(url: "young"))
@@ -239,7 +241,7 @@ class RestViewController: UIViewController{
     
     @objc func timerStartButton() {
         timer.invalidate()
-        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector:  #selector(self.updateTimer), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:  #selector(self.updateTimer), userInfo: nil, repeats: true)
     }
     
     func restartTimerButton() {
