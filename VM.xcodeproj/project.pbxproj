@@ -21,6 +21,7 @@
 		F6201008252327EA00523A72 /* RestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6201007252327EA00523A72 /* RestViewController.swift */; };
 		F620100A2523280800523A72 /* ZukanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62010092523280800523A72 /* ZukanViewController.swift */; };
 		F620100C2523281E00523A72 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F620100B2523281E00523A72 /* SettingViewController.swift */; };
+		F6491A13252DD5D200B931B5 /* PixelMplus10-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F62010062523260F00523A72 /* PixelMplus10-Regular.ttf */; };
 		F6879ECD2526E000004EDAC1 /* god.gif in Resources */ = {isa = PBXBuildFile; fileRef = F6879ECA2526E000004EDAC1 /* god.gif */; };
 		F6879ECE2526E000004EDAC1 /* young.gif in Resources */ = {isa = PBXBuildFile; fileRef = F6879ECB2526E000004EDAC1 /* young.gif */; };
 		F6879ECF2526E000004EDAC1 /* mob.gif in Resources */ = {isa = PBXBuildFile; fileRef = F6879ECC2526E000004EDAC1 /* mob.gif */; };
@@ -319,6 +320,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6491A13252DD5D200B931B5 /* PixelMplus10-Regular.ttf in Resources */,
 				F6FA474B252C2EB400FEBF9A /* dotpict 26.png in Resources */,
 				F6200FE32523257200523A72 /* LaunchScreen.storyboard in Resources */,
 				F6FA4747252C2C6300FEBF9A /* dotpict 34.png in Resources */,

@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftGifOrigin
+import UserNotifications
 
 var timerStartOrStop = 0
 var exp = 0
@@ -23,7 +24,7 @@ class FightViewController: UIViewController, UNUserNotificationCenterDelegate{
     var counterMinuts = 00
     var counterHours = 00
     var div = ":"
-    var div0 = ":0"
+    var div0 = "0"
     var timer: Timer = Timer()
 
     var judge = 0
@@ -136,7 +137,7 @@ class FightViewController: UIViewController, UNUserNotificationCenterDelegate{
         counterHours = 0
         
 //        獲得済みの経験値を表示
-        needExpLabel.text = String(exp)
+//        needExpLabel.text = String(exp)
         
         
 //        let img01 = UIImageView(image: UIImage.gif(url: "young"))
@@ -147,35 +148,60 @@ class FightViewController: UIViewController, UNUserNotificationCenterDelegate{
 //    画面描写後に、処理開始
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+        
+        if mustMove == 1 {
+            notificarionRest()
+            mustMove -= 1
+        }
+    }
 //        ランクアップしてたらランクアップのアラートを表示
+    
+//    休め！のアラート
+    func notificarionRest() {
+        let alert: UIAlertController = UIAlertController(title: "よく頑張った…！", message: "3分間休憩しよう。こんなにも頑張ったのだから。", preferredStyle: .alert)
+        
+        alert.addAction(
+                UIAlertAction(
+                    title: "全力で休む",
+                    style: .default,
+                    handler: { action in
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                )
+            )
+        present(alert, animated: true, completion: nil)
+    }
+
+//    通知の許可
+    func notificationFight() {
+        
+        //プッシュ通知のインスタンス
+        let notification = UNMutableNotificationContent()
+        //通知のタイトル
+        notification.title = "test"
+        //通知の本文
+        notification.body = "これはプッシュ通知です"
+        //通知の音
+        notification.sound = UNNotificationSound.default
+        
+        //ナビゲータエリア(ファイルが載っている左)にある画像を指定
+        if let path = Bundle.main.path(forResource: "猫", ofType: "png") {
+            
+            //通知に画像を設定
+            notification.attachments = [try! UNNotificationAttachment(identifier: "ID",
+                                                url: URL(fileURLWithPath: path), options: nil)]
+            
+        }
+        
+        //通知タイミングを指定(今回は5秒ご)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        //通知のリクエスト
+        let request = UNNotificationRequest(identifier: "ID", content: notification,
+                                            trigger: trigger)
+        //通知を実装
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
         
     }
-    
-    //通知を可能にする関数
-    func applicationDidEnterBackground(_ application: UIApplication) {
-
-        //　通知設定に必要なクラスをインスタンス化
-        let trigger: UNNotificationTrigger
-        let content = UNMutableNotificationContent()
-        var notificationTime = DateComponents()
-
-        // トリガー設定
-        notificationTime.hour = 12
-        notificationTime.minute = 0
-        trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-
-        // 通知内容の設定
-        content.title = ""
-        content.body = "食事の時間になりました！"
-        content.sound = UNNotificationSound.default
-
-        // 通知スタイルを指定
-        let request = UNNotificationRequest(identifier: "uuid", content: content, trigger: trigger)
-        // 通知をセット
-        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-
-    }
-    
 
 
 
@@ -196,37 +222,49 @@ class FightViewController: UIViewController, UNUserNotificationCenterDelegate{
 //    タイマーを更新する時の内容（0.01秒ごと）
     @objc func updateTimer() {
         counterSeconds += 1
-        if counterSeconds > 99 {
+        if counterSeconds > 59 {
             counterMinuts += 1
             counterSeconds = 0
         }
-        if counterMinuts > 59 {
-            counterHours += 1
-            counterMinuts = 0
-        }
+//        if counterMinuts > 59 {
+//            counterHours += 1
+//            counterMinuts = 0
+//        }
         
 //        00:00:00が保たれるように文字列を調整
+//        if counterSeconds < 10 && counterMinuts < 10 {
+//            timerCountLabel.text = String(counterHours) + div0 + String(counterMinuts) + div0 + String(counterSeconds)
+//        }else if counterSeconds < 10 {
+//            timerCountLabel.text = String(counterHours) + div + String(counterMinuts) + div0 + String(counterSeconds)
+//
+//        }else if counterMinuts < 10 {
+//            timerCountLabel.text = String(counterHours) + div0 + String(counterMinuts) + div + String(counterSeconds)
+//
+//        }else{
+//            timerCountLabel.text = String(counterHours) + div + String(counterMinuts) + div + String(counterSeconds)
+//        }
+//        00:00が保たれるように文字列を調整
         if counterSeconds < 10 && counterMinuts < 10 {
-            timerCountLabel.text = String(counterHours) + div0 + String(counterMinuts) + div0 + String(counterSeconds)
+            timerCountLabel.text = div0 + String(counterMinuts) + div + div0 + String(counterSeconds)
         }else if counterSeconds < 10 {
-            timerCountLabel.text = String(counterHours) + div + String(counterMinuts) + div0 + String(counterSeconds)
+            timerCountLabel.text =  String(counterMinuts) + div + div0 + String(counterSeconds)
 
         }else if counterMinuts < 10 {
-            timerCountLabel.text = String(counterHours) + div0 + String(counterMinuts) + div + String(counterSeconds)
+            timerCountLabel.text = div0 + String(counterMinuts) + div + String(counterSeconds)
 
         }else{
-            timerCountLabel.text = String(counterHours) + div + String(counterMinuts) + div + String(counterSeconds)
+            timerCountLabel.text =  String(counterMinuts) + div + String(counterSeconds)
         }
         
 //        休憩経験値を付与する
-        if counterHours > 10 {
+        if counterMinuts >= 3  {
 //            十分以降は1秒でマイナス10のExpを失う
             floatGiveExp -= 0.1
         }else {
 //            6秒ごとに経験値を1プラスする
             if timerStartOrStop != 0 {
-                if count < 600 {
-                    count += 10
+                if count < 6 {
+                    count += 1
                 }else {
                     floatGiveExp += 1
                     count = 0
@@ -234,16 +272,22 @@ class FightViewController: UIViewController, UNUserNotificationCenterDelegate{
             }
             
             
+            
         }
+        if floatGiveExp == 100 {
+            notificationFight()
+        }
+
 //        今なら獲得できる経験値を表示
-        nowGiveExpLabel.text = String(floatGiveExp)
+        nowGiveExpLabel.text = String(round(floatGiveExp * 10)/10)
         nowGiveFloatExpLabel.text = String(giveExp)
     }
+    
 
 //    タイマーを再生する機能
     @objc func timerStartButton() {
         timer.invalidate()
-        timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector:  #selector(self.updateTimer), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector:  #selector(self.updateTimer), userInfo: nil, repeats: true)
     }
 
 //    再開の機能
@@ -268,3 +312,16 @@ class FightViewController: UIViewController, UNUserNotificationCenterDelegate{
 
 }
 
+extension AppDelegate: UNUserNotificationCenterDelegate{
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        // アプリ起動中でもアラートと音で通知
+        completionHandler([.alert, .sound])
+        
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        completionHandler()
+        
+    }
+}

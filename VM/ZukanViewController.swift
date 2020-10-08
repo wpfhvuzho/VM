@@ -77,7 +77,6 @@ class ZukanViewController: UIViewController {
     @IBAction func toFight() {
         let fightViewController = storyboard?.instantiateViewController(identifier: "FightViewController")
         self.present(fightViewController!, animated: false, completion: nil)
-        timerStartOrStop += 1
     }
     
 
