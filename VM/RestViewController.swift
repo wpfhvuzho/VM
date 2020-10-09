@@ -229,7 +229,7 @@ class RestViewController: UIViewController{
             count += 1
         }else {
             count = 0
-            floatGiveExp += 10
+            floatGiveExp += 1
         }
         nowGiveExpLabel.text = String(floatGiveExp)
         if counterHours <= 0 && counterMinuts <= 0 && counterSeconds <= 0 {

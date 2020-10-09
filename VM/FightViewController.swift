@@ -258,7 +258,7 @@ class FightViewController: UIViewController, UNUserNotificationCenterDelegate{
         }
         
 //        休憩経験値を付与する
-        if counterMinuts >= 3  {
+        if counterMinuts >= 10  {
 //            十分以降は1秒でマイナス10のExpを失う
             floatGiveExp -= 0.1
         }else {
